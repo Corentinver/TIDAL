@@ -5,6 +5,7 @@ if(isset($_POST)){
 	echo "ID :".$_POST['ID'];
 	echo "PASS :".$_POST['PASS'];
 
+
 	session_start();
 	
 	require('./libs/smarty/Smarty.class.php');
