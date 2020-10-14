@@ -12,3 +12,7 @@ try {
 }
 
 echo("Ça marche !!!");
+
+include 'menu.php';
+
+
