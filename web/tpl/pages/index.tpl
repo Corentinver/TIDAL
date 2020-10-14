@@ -1,3 +1,3 @@
 <div>
-{$products}
+{$toto}
 </div>

@@ -1,7 +1,7 @@
 <?php
     $res = $bdd->query('Select * From Products');
-    $smarty->assign('products',$res);
-
+    //$smarty->assign('products',$res);
+    $smarty->assign('toto',15);
     /*
         <table>
     <tr>
