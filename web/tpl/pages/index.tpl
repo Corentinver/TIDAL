@@ -7,9 +7,9 @@
     </tr>
     {foreach from=products item=product}
     <tr>
-        <td>{$product.name}<td>
-        <td>{$product.price}<td>
-        <td>{$product.description}<td>
+        <td>{$product['name']}<td>
+        <td>{$product['price']}<td>
+        <td>{$product['description']}<td>
     </tr>
     {/foreach}
 </div>
