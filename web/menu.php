@@ -1,6 +1,6 @@
 
-<input type="button">Se connecter</>
-<input type="button">Panier</>
+<input type="button" value="Se connecter"></>
+<input type="button" value="Panier"</>
 
 
 
