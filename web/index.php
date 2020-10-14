@@ -8,9 +8,11 @@ try {
     $bdd->query("SET NAMES UTF8");
     $res = $bdd->query('Select * From Products');
     foreach($res as $row){
-      echo $row;
+      echo $row['name'] + '\t';
+      echo $row['price'] + '\t';
+      echo $row['description'] + '\n';
     }
-    echo $res;
+    echo $res + '\t';
     
 } catch (Exception $e) {	
     echo $e + "\n";
