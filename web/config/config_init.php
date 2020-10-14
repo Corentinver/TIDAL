@@ -4,7 +4,7 @@ header("Cache-Control: no-cache");
 
 // Chargement Smarty et Defines
 require('defines.inc.php');
-require(_PATH_ . 'web/tools/smarty/Smarty.class.php');
+require(_PATH_ . 'libs/smarty/Smarty.class.php');
 
 // Chargement du coeur
 $files = scandir(_MODEL_);
