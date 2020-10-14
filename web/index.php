@@ -1,7 +1,4 @@
 <?php
-session_start();
-
-require('./libs/smarty/Smarty.class.php');
 
 try {
     $bdd = new PDO("mysql:host=f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com;port=3306;dbname=c2as0sld1uv3e09n", "vyduy5wuyry0lrw1",  "hbtajkck31kwohut");
