@@ -11,6 +11,7 @@ try {
       echo $row['name'];
       echo $row['price'];
       echo $row['description'];
+      echo "\n"
     }
     echo $res + '\t';
     
