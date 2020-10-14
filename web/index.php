@@ -14,10 +14,12 @@ try {
     <th>Name<th>
     <tr>";
     foreach($res as $row){
+      echo "<tr>";
       echo "<td>".$row['name']."<td>";
       echo "<td>".$row['price']."<td>";
       echo "<td>".$row['description']."<td>";
       echo "</br>";
+      echo "<tr>";
     }
     echo "</table>";
     
