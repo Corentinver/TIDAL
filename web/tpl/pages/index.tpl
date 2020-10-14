@@ -5,7 +5,7 @@
         <th>Price<th>
         <th>Description<th>
     </tr>
-    {foreach from=products item=product}
+    {foreach from=$products item=product}
     <tr>
         <td>{$product['name']}<td>
         <td>{$product['price']}<td>
