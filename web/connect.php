@@ -14,9 +14,9 @@ if(isset($_POST)){
 		$res = $bdd->prepare('Select firstname,familyname From Customers WHERE username="'.$_POST['ID'].'" AND password="'.$hash.'"');
 		$res->execute();
 		$res = $res->fetch(PDO::FETCH_OBJ);
-		#echo $res->firstname." ".$res->familyname;
+		/*echo $res->firstname." ".$res->familyname;*/
 		$_SESSION['user'] = $_POST['ID'];
-
+		header('location:menu.php');
 	} catch (Exception $e) {
 	    echo $e + "\n";
 	    echo "Problème de connexion à la base de donnée !";
