@@ -4,7 +4,7 @@
 		<div class="col-lg-4 col-md-6">
 			<div class="single-product">
 				<div class="product-img">
-					<img class="card-img" src="'../../public/img/product'" + {$product['picture']}" alt="">
+					<img class="card-img" src="'../../public/img/product/'$product['picture']}" alt="">
 					<div class="p_icon">
 						<a href="#">
 							<i class="ti-eye"></i>
