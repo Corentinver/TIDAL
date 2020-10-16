@@ -16,7 +16,7 @@ if(isset($_POST)){
 		if ($res->rowCount() > 0 ){
 			$_SESSION['user'] = $_POST['ID'];
 			$res = $res->fetch(PDO::FETCH_OBJ);
-			$_SESSION['firstame'] = $res->firstname;
+			$_SESSION['firstname'] = $res->firstname;
 			$_SESSION['familyname'] = $res->familyname;
 			
 		}
