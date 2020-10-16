@@ -17,10 +17,10 @@ if(isset($_POST)){
 		$res = $bdd->prepare('Select firstname,familyname From Customers WHERE username="'.$_POST['ID'].'"');
 		$res->execute();
 		print_r($res);
-		echo " end of research";
-		//foreach($res as $row){
-	    	//  echo "<p>".$row['firstname']."</p>";
-	    	//}
+		//echo " end of research";
+		foreach($res as $row){
+	    	  echo "<p>".$row['firstname']." ".$row['familyname']."</p>";
+	    	}
 	
 	} catch (Exception $e) {
 		echo $e + "\n";
