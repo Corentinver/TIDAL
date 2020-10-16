@@ -1,11 +1,15 @@
 <?php
 session_start();
 if(isset($_SESSION['user'])){
-	echo '<input type="sumbit" value="Déconnexion">';
+	echo '<form method="post">
+		<input type="sumbit" value="Déconnexion">
+	</form>';
 }
 else{
 
-	echo '<input type="submit" name="connect_button" value="Se connecter">';
+	echo '<form method="post">
+		<input type="submit" name="connect_button" value="Se connecter">
+	</form>';
 	if(array_key_exists('connect_button', $_POST)) {
             connect_button();
         }	
