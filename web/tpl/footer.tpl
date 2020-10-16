@@ -69,19 +69,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </div>
   </footer>
 
-	<script src="../../public/js/jquery-3.2.1.min.js"></script>
-	<script src="../../public/js/popper.js"></script>
-	<script src="../../public/js/bootstrap.min.js"></script>
-	<script src="../../public/js/stellar.js"></script>
-	<script src="../../public/vendors/lightbox/simpleLightbox.min.js"></script>
-	<script src="../../public/vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="../../public/vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="../../public/vendors/isotope/isotope-min.js"></script>
-	<script src="../../public/vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="../../public/js/jquery.ajaxchimp.min.js"></script>
-	<script src="../../public/vendors/counter-up/jquery.waypoints.min.js"></script>
-	<script src="../../public/vendors/counter-up/jquery.counterup.js"></script>
-	<script src="../../public/js/mail-script.js"></script>
-	<script src="../../public/js/theme.js"></script>
+	<script src="../public/js/jquery-3.2.1.min.js"></script>
+	<script src="../public/js/popper.js"></script>
+	<script src="../public/js/bootstrap.min.js"></script>
+	<script src="../public/js/stellar.js"></script>
+	<script src="../public/vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="../public/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="../public/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="../public/vendors/isotope/isotope-min.js"></script>
+	<script src="../public/vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="../public/js/jquery.ajaxchimp.min.js"></script>
+	<script src="../public/vendors/counter-up/jquery.waypoints.min.js"></script>
+	<script src="../public/vendors/counter-up/jquery.counterup.js"></script>
+	<script src="../public/js/mail-script.js"></script>
+	<script src="../public/js/theme.js"></script>
 </body>
 </html>
