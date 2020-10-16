@@ -16,7 +16,7 @@ if(isset($_POST)){
 		
 		$res = $bdd->prepare('Select firstname,familyname From Customers WHERE username="'.$_POST['ID'].'"');
 		$res->execute();
-		$res = $res->fetch(PDO::FETCH_OBJECT);
+		$res = $res->fetch(PDO::FETCH_OBJ);
 		echo $res->firstname." ".$res->familyname;
 		//echo " end of research";
 		//foreach($res as $row){
