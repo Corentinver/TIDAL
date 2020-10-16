@@ -6,7 +6,7 @@
 				<div class="product-img">
 					<img class="card-img" src="../../public/img/product/{$product['picture']}" alt="">
 					<div class="p_icon">
-						<a href="#">
+						<a href="?page=single_product&id={$product['id']}">
 							<i class="ti-eye"></i>
 						</a>
 						<a href="#">

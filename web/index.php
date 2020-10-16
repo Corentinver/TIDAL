@@ -54,6 +54,4 @@ else
 
 $smarty->display(_TPL_ . 'footer.tpl');
 
-$smarty->display(_TPL_ . 'products.tpl');
-
 ?>
