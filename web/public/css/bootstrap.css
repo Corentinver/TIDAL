@@ -4690,7 +4690,6 @@ input[type=submit].btn-block {
 }
 
 .card-img {
-    width: 100%;
     border-radius: calc(.25rem - 1px)
 }
 
