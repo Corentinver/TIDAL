@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if(isset($_POST)){
 	echo "ID :".$_POST['ID'];
 	echo "PASS :".$_POST['PASS'];
@@ -15,7 +15,7 @@ if(isset($_POST)){
 		$res->execute();
 		$res = $res->fetch(PDO::FETCH_OBJ);
 		#echo $res->firstname." ".$res->familyname;
-		
+		$_SESSION['user'] = $_POST['ID'];
 
 	} catch (Exception $e) {
 	    echo $e + "\n";
