@@ -4,7 +4,7 @@
 class Product {
     public function getAll(){
         $db = Database::init();
-        return $db.connect()->query('Select * From Product');
+        return $db->connect()->query('Select * From Product');
     }
 
     public function addBasket($params){
