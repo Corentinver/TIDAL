@@ -29,10 +29,6 @@ try {
     die();
 }
 
-
-
-echo("Ça marche !!!");
-
 //include 'menu.php';
 include './config/config_init.php';
 
@@ -57,5 +53,7 @@ else
     $smarty->display(_TPL_ . 'pages/index.tpl');
 
 $smarty->display(_TPL_ . 'footer.tpl');
+
+$smarty->display(_TPL_ . 'products.tpl');
 
 ?>
