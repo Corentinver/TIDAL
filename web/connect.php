@@ -13,10 +13,12 @@ if(isset($_POST)){
 	    	$bdd->query("SET NAMES UTF8");
 		$res = $bdd->prepare('Select firstname,familyname From Customers WHERE username="'.$_POST['ID'].'" AND password="'.$hash.'"');
 		$res->execute();
-		$res = $res->fetch(PDO::FETCH_OBJ);
-		/*echo $res->firstname." ".$res->familyname;*/
 		if ($res->rowCount() > 0 ){
 			$_SESSION['user'] = $_POST['ID'];
+			/*$res = $res->fetch(PDO::FETCH_OBJ);
+			$_SESSION['firstame'] = $res->firstname;
+			$_SESSION['familyname'] = $res->familyname;
+			 */
 		}
 		header('location:menu.php');
 	} catch (Exception $e) {
