@@ -19,9 +19,9 @@ if(isset($_POST)){
 		$res->fetch(PDO::FETCH_OBJECT);
 		echo $res->firstname." ".$res->familyname;
 		//echo " end of research";
-		foreach($res as $row){
-	    	  echo "<p>".$row['firstname']." ".$row['familyname']."</p>";
-	    	}
+		//foreach($res as $row){
+	    	 // echo "<p>".$row['firstname']." ".$row['familyname']."</p>";
+	    	//}
 	
 	} catch (Exception $e) {
 		echo $e + "\n";
