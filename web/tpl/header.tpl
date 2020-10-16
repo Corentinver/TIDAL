@@ -18,8 +18,8 @@
         <link rel="stylesheet" href="../public/vendors/animate-css/animate.css" />
         <link rel="stylesheet" href="../public/vendors/jquery-ui/jquery-ui.css" />
         <!-- main css -->
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="../public/css/style.css" />
+        <link rel="stylesheet" href="../public/css/responsive.css" />
 </head>
 <body>
 <header class="header_area">
