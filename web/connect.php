@@ -15,7 +15,9 @@ if(isset($_POST)){
 		$res->execute();
 		$res = $res->fetch(PDO::FETCH_OBJ);
 		/*echo $res->firstname." ".$res->familyname;*/
-		$_SESSION['user'] = $_POST['ID'];
+		if ($res->rowCount() > 0 ){
+			$_SESSION['user'] = $_POST['ID'];
+		}
 		header('location:menu.php');
 	} catch (Exception $e) {
 	    echo $e + "\n";
