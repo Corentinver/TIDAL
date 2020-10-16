@@ -15,7 +15,7 @@ if(isset($_POST)){
     		$bdd->query("SET NAMES UTF8");
 		
 		$res = $bdd->query('Select firstname,familyname From Customers WHERE username="george"');
-	    	echo "Prénom + Nom".$res['firstname'];
+	    	print_r($res);
 		echo "end of research";
 		//foreach($res as $row){
 	    	//  echo "<p>".$row['firstname']."</p>";
