@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['user'])){
-	echo '<p>Bienvenue '.$_SESSION['firstname'].' '.$_SESSION['familyname'].'</p>
+	echo '<p>Bienvenue '.$_SESSION['firstname'].''.$_SESSION['familyname'].'</p>
 	<form method="post" action="disconnect.php">
 		<input type="submit" value="Déconnexion">
 	</form>';
