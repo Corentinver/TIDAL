@@ -15,10 +15,10 @@ if(isset($_POST)){
 		$res->execute();
 		if ($res->rowCount() > 0 ){
 			$_SESSION['user'] = $_POST['ID'];
-			/*$res = $res->fetch(PDO::FETCH_OBJ);
+			$res = $res->fetch(PDO::FETCH_OBJ);
 			$_SESSION['firstame'] = $res->firstname;
 			$_SESSION['familyname'] = $res->familyname;
-			 */
+			
 		}
 		header('location:menu.php');
 	} catch (Exception $e) {
