@@ -29,10 +29,6 @@ try {
     die();
 }
 
-
-
-echo("Ça marche !!!");
-
 //include 'menu.php';
 include './config/config_init.php';
 

@@ -1,8 +1,14 @@
 <?php
 session_start();
 if(isset($_SESSION['user'])){
+<<<<<<< HEAD
 	echo '<form method="post">
 		<input type="sumbit" value="Déconnexion">
+=======
+	echo '<p>Bienvenue '.$_SESSION['firstname'].''.$_SESSION['familyname'].'</p>
+	<form method="post" action="disconnect.php">
+		<input type="submit" value="Déconnexion">
+>>>>>>> master
 	</form>';
 }
 else{

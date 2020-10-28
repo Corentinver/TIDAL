@@ -6,6 +6,9 @@ header("Cache-Control: no-cache");
 require('defines.inc.php');
 require(_PATH_ . 'libs/smarty/Smarty.class.php');
 
+//Database configuration
+require('database_conf.php');
+
 // Chargement du coeur
 $files = scandir(_MODEL_);
 foreach ($files as $filename)

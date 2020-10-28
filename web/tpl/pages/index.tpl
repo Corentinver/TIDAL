@@ -1,3 +1,1 @@
-<div>
-{$products}
-</div>
+PAGE DACCUEIL A FAIRE
