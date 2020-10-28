@@ -13,12 +13,6 @@ if(isset($_POST)){
 	    	$bdd->query("SET NAMES UTF8");
 		$res = $bdd->prepare('Select firstname,familyname From Customers WHERE username="'.$_POST['ID'].'" AND password="'.$hash.'"');
 		$res->execute();
-<<<<<<< HEAD
-		$res = $res->fetch(PDO::FETCH_OBJ);
-		#echo $res->firstname." ".$res->familyname;
-		$_SESSION['user'] = $_POST['ID'];
-
-=======
 		if ($res->rowCount() > 0 ){
 			$_SESSION['user'] = $_POST['ID'];
 			$res = $res->fetch(PDO::FETCH_OBJ);
@@ -27,7 +21,6 @@ if(isset($_POST)){
 			
 		}
 		header('location:menu.php');
->>>>>>> master
 	} catch (Exception $e) {
 	    echo $e + "\n";
 	    echo "Problème de connexion à la base de donnée !";
