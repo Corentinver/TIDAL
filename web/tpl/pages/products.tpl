@@ -10,7 +10,7 @@
 						<a href="?page=single_product&id={$product['id']}">
 							<i class="ti-eye"></i>
 						</a>
-						<a href="#">
+						<a href="?php=<?php echo 'toto'; ?>">
 							<i class="ti-heart"></i>
 						</a>
 						<a href="#">
