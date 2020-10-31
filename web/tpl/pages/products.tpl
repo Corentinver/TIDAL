@@ -1,3 +1,6 @@
+<?php
+echo $_SESSION['product']
+?>
 <div class="latest_product_inner">
 	<div class="row">
 		{foreach from=$products item=product}
@@ -9,7 +12,7 @@
 						<a href="?page=single_product&id={$product['id']}">
 							<i class="ti-eye"></i>
 						</a>
-						<a href="#" onclick="{funct()}">
+						<a href="#" onclick="<?php $_SESSION['product'] = 'Un product'; ?>">
 							<i class="ti-heart"></i>
 						</a>
 						<a href="#">

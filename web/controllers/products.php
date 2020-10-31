@@ -6,8 +6,6 @@
         echo '<?php';
         echo '$_SESSION[\'product\'] = \'Un product\';'
         echo '?>'
-        
-        print_r($_SESSION['product']);
     }
 
     $smarty->assign('funct',funct());
