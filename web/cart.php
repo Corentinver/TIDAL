@@ -1,31 +1,77 @@
 <?php
 session_start();
-if(isset($_POST)){
-	echo "ID :".$_POST['ID'];
-	echo "PASS :".$_POST['PASS'];
-	$hash = md5($_POST['PASS']);
-	session_start();
-	
-	require('./libs/smarty/Smarty.class.php');
-	
-	try {
-	    	$bdd = new PDO("mysql:host=f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com;port=3306;dbname=c2as0sld1uv3e09n", "vyduy5wuyry0lrw1",  "hbtajkck31kwohut");
-	    	$bdd->query("SET NAMES UTF8");
-		$res = $bdd->prepare('Select firstname,familyname From Customers WHERE username="'.$_POST['ID'].'" AND password="'.$hash.'"');
-		$res->execute();
-		if ($res->rowCount() > 0 ){
-			$_SESSION['user'] = $_POST['ID'];
-			$res = $res->fetch(PDO::FETCH_OBJ);
-			$_SESSION['firstname'] = $res->firstname;
-			$_SESSION['familyname'] = $res->familyname;
-			
-		}
-		header('location:menu.php');
-	} catch (Exception $e) {
-	    echo $e + "\n";
-	    echo "Problème de connexion à la base de donnée !";
-	    die();
-	}
+
+function createCart(){
+   if (!isset($_SESSION['cart'])){
+      $_SESSION['cart']=array();
+      $_SESSION['cart']['libelleProduit'] = array();
+      $_SESSION['cart']['qteProduit'] = array();
+      $_SESSION['cart']['prixProduit'] = array();
+      $_SESSION['cart']['verrou'] = false;
+   }
+   return true;
 }
+
+function addToCart($libelleProduit,$qteProduit,$prixProduit){
+
+   //Si le cart existe
+   if (creationcart() && !isVerrouille())
+   {
+      //Si le produit existe déjà on ajoute seulement la quantité
+      $positionProduit = array_search($libelleProduit,  $_SESSION['cart']['libelleProduit']);
+
+      if ($positionProduit !== false)
+      {
+         $_SESSION['cart']['qteProduit'][$positionProduit] += $qteProduit ;
+      }
+      else
+      {
+         //Sinon on ajoute le produit
+         array_push( $_SESSION['cart']['libelleProduit'],$libelleProduit);
+         array_push( $_SESSION['cart']['qteProduit'],$qteProduit);
+         array_push( $_SESSION['cart']['prixProduit'],$prixProduit);
+      }
+   }
+   else
+   echo "Un problème est survenu veuillez contacter l'administrateur du site.";
+}
+function supprimerArticle($libelleProduit){
+   //Si le cart existe
+   if (creationcart() && !isVerrouille())
+   {
+      //Nous allons passer par un cart temporaire
+      $tmp=array();
+      $tmp['libelleProduit'] = array();
+      $tmp['qteProduit'] = array();
+      $tmp['prixProduit'] = array();
+      $tmp['verrou'] = $_SESSION['cart']['verrou'];
+
+      for($i = 0; $i < count($_SESSION['cart']['libelleProduit']); $i++)
+      {
+         if ($_SESSION['cart']['libelleProduit'][$i] !== $libelleProduit)
+         {
+            array_push( $tmp['libelleProduit'],$_SESSION['cart']['libelleProduit'][$i]);
+            array_push( $tmp['qteProduit'],$_SESSION['cart']['qteProduit'][$i]);
+            array_push( $tmp['prixProduit'],$_SESSION['cart']['prixProduit'][$i]);
+         }
+
+      }
+      //On remplace le cart en session par notre cart temporaire à jour
+      $_SESSION['cart'] =  $tmp;
+      //On efface notre cart temporaire
+      unset($tmp);
+   }
+   else
+   echo "Un problème est survenu veuillez contacter l'administrateur du site.";
+}
+function MontantGlobal(){
+   $total=0;
+   for($i = 0; $i < count($_SESSION['cart']['libelleProduit']); $i++)
+   {
+      $total += $_SESSION['cart']['qteProduit'][$i] * $_SESSION['cart']['prixProduit'][$i];
+   }
+   return $total;
+}
+
 ?>
 
