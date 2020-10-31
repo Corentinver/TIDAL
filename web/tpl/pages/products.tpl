@@ -15,15 +15,7 @@
 						<a href="#">
 							<i class="ti-shopping-cart"></i>
 						</a>
-						{php}
-							if(array_key_exists('addToCart', $_POST)){
-								echo "Ajout au Panier";
-							}
-						{/php}
-						<form method="post"> 
-							 <input type="submit" name="addToCart" class="button" value="Plus" /> 
-						</form>
-						
+						{$form}
 					</div>
 				</div>
 				<div class="product-btm">
