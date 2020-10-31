@@ -6,5 +6,5 @@
         $_SESSION['product'] = 'Un product';
     }
 
-    $smarty->assign('funct','funct');
+    $smarty->assign('funct',funct());
 ?>
