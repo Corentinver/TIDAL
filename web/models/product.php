@@ -11,7 +11,7 @@ class Product {
         $db = Database::init();
         /*$query = $db->connect()->prepare("SELECT `*` FROM `Products` WHERE id=:id");
         $query->bindParam(":id",$id);*/
-        return $db->connect()->prepare("SELECT `*` FROM `Products` WHERE `id=$id`");
+        return $db->connect()->query("SELECT `*` FROM `Products` WHERE `id=$id`");
     }
 
     public function addBasket($params){
