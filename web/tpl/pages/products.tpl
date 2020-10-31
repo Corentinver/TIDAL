@@ -1,18 +1,19 @@
-<?php
-echo $_SESSION['product']
-?>
 <div class="latest_product_inner">
 	<div class="row">
 		{foreach from=$products item=product}
 		<div class="col-lg-4 col-md-6">
+		{php}
+			$this->assign('funct', 'Ma function')
+		{/php}
 			<div class="single-product">
 				<div class="product-img">
+				${$funct}
 					<img class="card-img" src="../../public/img/product/{$product['picture']}" alt="">
 					<div class="p_icon">
 						<a href="?page=single_product&id={$product['id']}">
 							<i class="ti-eye"></i>
 						</a>
-						<a href="#" onclick="<?php $_SESSION['product'] = 'Un product'; ?>">
+						<a href="#">
 							<i class="ti-heart"></i>
 						</a>
 						<a href="#">
@@ -33,3 +34,4 @@ echo $_SESSION['product']
     {/foreach}		
 	</div>
 </div>
+
