@@ -8,7 +8,7 @@
 		
 			<div class="single-product">
 				<div class="product-img">
-				${$funct}
+				{$funct}
 					<img class="card-img" src="../../public/img/product/{$product['picture']}" alt="">
 					<div class="p_icon">
 						<a href="?page=single_product&id={$product['id']}">
