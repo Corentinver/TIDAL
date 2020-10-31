@@ -15,13 +15,13 @@
 						<a href="#">
 							<i class="ti-shopping-cart"></i>
 						</a>
-						<?php
+						{php}
 							if(array_key_exists('addToCart', $_POST)){
 								echo "Ajout au Panier";
 								print "TTTTTTTEEEEEEEST";
 								window.open("https://www.w3schools.com");
 							}
-						?>
+						{/php}
 						<form method="post"> 
 							 <input type="submit" name="addToCart" class="button" value="Plus" /> 
 						</form>
