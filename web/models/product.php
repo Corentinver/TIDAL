@@ -11,6 +11,7 @@ class Product {
         $db = Database::init();
         $query = $db->connect()->prepare("SELECT `*` FROM `Products` WHERE id=:id");
         $query->bindParam(":id",$id);
+        var_dump($query->execute());
         return $query->execute();
     }
 
