@@ -9,9 +9,11 @@ class Product {
 
     public function getProductById($id){
         $db = Database::init();
-        /*$query = $db->connect()->prepare("SELECT `*` FROM `Products` WHERE id=:id");
-        $query->bindParam(":id",$id);*/
-        return $db->connect()->query("Select * From Products Where id='1'");
+        $query = $db->connect()->prepare("SELECT `*` FROM `Products` WHERE id=:id");
+        $query->bindParam(":id",$id);
+        $query->execute();
+        var_dump($query);
+        return $query;
     }
 
     public function addBasket($params){
