@@ -9,9 +9,8 @@ class Product {
 
     public function getProductById($id){
         $db = Database::init();
-        $query = $db->connect()->prepare("SELECT `*` FROM `Products` WHERE id=:id");
-        $query->bindParam(":id",$id);
-        var_dump($query->execute());
+        /*$query = $db->connect()->prepare("SELECT `*` FROM `Products` WHERE id=:id");
+        $query->bindParam(":id",$id);*/
         return $db->connect()->prepare("SELECT `*` FROM `Products` WHERE `id=$id`");
     }
 
