@@ -9,6 +9,7 @@ class Database
     private $DB_user_password = PASSWORD;
     private $DB_driver = DRIVER;
     private $DB_database = DBNAME;
+    
     public static function init()
     {
         try {
