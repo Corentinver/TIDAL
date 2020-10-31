@@ -12,13 +12,11 @@ class Product {
         $query = $db->connect()->prepare("SELECT `*` FROM `Products` WHERE id=:id");
         $query->bindParam(":id",$id);
         $query->execute();
-        var_dump($query);
         return $query;
     }
 
-    public function addBasket($params){
-        $db = Database::init();
-        $db.connect()->query('Select * From Product');
+    public function addBasket(){
+        var_dump('toto');
     }
 }
 
