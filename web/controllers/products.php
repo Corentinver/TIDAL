@@ -10,4 +10,3 @@
 	$smarty->assign('form', '<form action="javascript:void(0);" method="post"><input type="submit" name="addToCart" class="button" value="Plus" /></form>');
 	
 ?>
-?>
