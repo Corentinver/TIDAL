@@ -18,6 +18,7 @@
 						<?php
 							if(array_key_exists('addToCart', $_POST)){
 								echo "Ajout au Panier";
+								print "TTTTTTTEEEEEEEST";
 								window.open("https://www.w3schools.com");
 							}
 						?>
