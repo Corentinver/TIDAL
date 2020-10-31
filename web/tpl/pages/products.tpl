@@ -1,14 +1,10 @@
 <div class="latest_product_inner">
 	<div class="row">
-		{php}
-			$this->assign('funct', 'Ma function')
-		{/php}
 		{foreach from=$products item=product}
 		<div class="col-lg-4 col-md-6">
 		
 			<div class="single-product">
 				<div class="product-img">
-				{$funct}
 					<img class="card-img" src="../../public/img/product/{$product['picture']}" alt="">
 					<div class="p_icon">
 						<a href="?page=single_product&id={$product['id']}">
