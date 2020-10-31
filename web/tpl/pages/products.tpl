@@ -1,10 +1,11 @@
 <div class="latest_product_inner">
 	<div class="row">
-		{foreach from=$products item=product}
-		<div class="col-lg-4 col-md-6">
 		{php}
 			$this->assign('funct', 'Ma function')
 		{/php}
+		{foreach from=$products item=product}
+		<div class="col-lg-4 col-md-6">
+		
 			<div class="single-product">
 				<div class="product-img">
 				${$funct}
