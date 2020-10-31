@@ -3,7 +3,10 @@
     var_dump($productClass->getAll());
     $smarty->assign('products',$productClass->getAll());
     function funct(){
-        $_SESSION['product'] = 'Un product';
+        echo '<?php';
+        echo '$_SESSION[\'product\'] = \'Un product\';'
+        echo '?>'
+        
         print_r($_SESSION['product']);
     }
 
