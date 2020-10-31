@@ -12,7 +12,7 @@ class Product {
         $query = $db->connect()->prepare("SELECT `*` FROM `Products` WHERE id=:id");
         $query->bindParam(":id",$id);
         var_dump($query->execute());
-        return $query->execute();
+        return $db->connect()->prepare("SELECT `*` FROM `Products` WHERE `id=$id`");
     }
 
     public function addBasket($params){
