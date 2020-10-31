@@ -2,9 +2,9 @@
     $productClass = new Product();
     var_dump($productClass->getAll());
     $smarty->assign('products',$productClass->getAll());
-    var funct = () => {
-        echo 'toto';
+    function funct(){
+        echo 'ok';
     }
 
-    $smarty->assign('funct',funct);
+    $smarty->assign('funct','funct');
 ?>
