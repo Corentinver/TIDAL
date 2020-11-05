@@ -15,7 +15,6 @@
 						<a href="#">
 							<i class="ti-shopping-cart"></i>
 						</a>
-						{$form}
 					</div>
 				</div>
 				<button type="button"> Panier</button>
