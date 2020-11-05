@@ -24,7 +24,7 @@
 						$("button").click(function(){
 							$.ajax({
 								type: 'POST',
-								url: 'cart.php',
+								url: "/cart.php",
 								success: function(data) {
 									alert("super");
 									$("p").text(data);
