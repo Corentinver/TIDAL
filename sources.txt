@@ -1,1 +1,4 @@
 https://jcrozier.developpez.com/articles/web/panier/
+https://stackoverflow.com/questions/20738329/how-to-call-a-php-function-on-the-click-of-a-button
+https://www.smarty.net/docs/en/advanced.features.objects.tpl
+https://www.smarty.net/docsv2/en/language.function.html.options

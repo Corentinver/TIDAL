@@ -18,14 +18,24 @@
 						{$form}
 					</div>
 				</div>
-				<div class="product-btm">
-					<a href="#" class="d-block">
-						<h4>{$product['name']}</h4>
-					</a>
-					<div class="mt-3">
-						<span class="mr-4">{$product['price']}€</span>
-					</div>
-				</div>
+				<button type="button"> Panier</button>
+				<p></p>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$("button").click(function(){
+
+							$.ajax({
+								type: 'POST',
+								url: 'cart.php',
+								success: function(data) {
+									alert("super");
+									$("p").text(data);
+
+								}
+							});
+				   });
+				});
+				</script>
 			</div>
 		</div>				
     {/foreach}		

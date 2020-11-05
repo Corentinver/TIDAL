@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
 
 function createCart(){
    if (!isset($_SESSION['cart'])){
@@ -72,6 +72,8 @@ function MontantGlobal(){
    }
    return $total;
 }
+*/
 
+ echo "Added";
 ?>
 
