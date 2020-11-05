@@ -22,7 +22,6 @@
 				<script type="text/javascript">
 					$(document).ready(function(){
 						$("button").click(function(){
-
 							$.ajax({
 								type: 'POST',
 								url: 'cart.php',
