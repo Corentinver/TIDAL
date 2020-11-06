@@ -11,8 +11,7 @@
 					qty: 1
 				},
 				success: function(data) {
-					alert("super");
-
+					alert(data)
 				}
 			});
 		}

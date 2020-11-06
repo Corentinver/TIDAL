@@ -1,6 +1,7 @@
 <?php
 
 if(isset($_POST['action']) && !empty($_POST['action'])){
+    echo 'toto'
     switch($_POST['action']){
         case 'addToCart' :
             addToCart($_POST['product'], $_POST['qty']);
