@@ -17,14 +17,19 @@
 						</a>
 					</div>
 				</div>
-				<input type="button" id="addcart" onclick="AddToCart()" value="Add">
+				<input type="button" id="addcart" onclick="AddToCart({$product})" value="Add">
 				<script type="text/javascript">
 					{literal}
-						function AddToCart() {
+						function AddToCart(id) {
 							var element = document.getElementById('addcart'); 
 							$.ajax({
 								type: 'POST',
 								url: "/cart.php",
+								data : { 
+									action: 'addToCart',
+									product: product,
+									qty: 1
+								}
 								success: function(data) {
 									alert("super");
 
