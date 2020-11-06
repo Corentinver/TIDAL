@@ -1,6 +1,6 @@
 <script type="text/javascript">
 	{literal}
-		function AddToCart(id) {
+		function AddToCart(product) {
 			var element = document.getElementById('addcart'); 
 			$.ajax({
 				type: 'POST',
