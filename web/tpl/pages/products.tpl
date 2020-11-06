@@ -22,17 +22,9 @@
 				<script type="text/javascript">
 					$(document).ready(function(){
 						$("button").click(function(){
-							$.ajax({
-								type: 'POST',
-								url: "/cart.php",
-								success: function(data) {
-									alert("super");
-									$("p").text(data);
-
-								}
-							});
-				   });
-				});
+							alert("super");
+						});
+					});
 				</script>
 			</div>
 		</div>				
