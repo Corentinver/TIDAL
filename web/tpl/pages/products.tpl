@@ -17,11 +17,14 @@
 						</a>
 					</div>
 				</div>
-				<button type="button"> Panier</button>
+				<input type="button" id="addcart" onclick="myFunction()" value="Add"
 				<p></p>
 				<script type="text/javascript">
 					{literal}
-						alert("super");
+						function myFunction() {
+							var element = document.getElementById('addcart'); 
+							alert("super");
+						}
 					{/literal}
 				</script>
 			</div>
