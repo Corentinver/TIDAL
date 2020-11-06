@@ -9,7 +9,7 @@
 					action: 'addToCart',
 					product: product,
 					qty: 1
-				}
+				},
 				success: function(data) {
 					alert("super");
 
