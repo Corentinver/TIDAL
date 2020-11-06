@@ -20,11 +20,13 @@
 				<button type="button"> Panier</button>
 				<p></p>
 				<script type="text/javascript">
+					{literal}
 					$(document).ready(function(){
 						$("button").click(function(){
 							alert("super");
 						});
 					});
+					{/literal}
 				</script>
 			</div>
 		</div>				
