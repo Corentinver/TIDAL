@@ -4,7 +4,7 @@
 			var element = document.getElementById('addcart'); 
 			$.ajax({
 				type: 'POST',
-				url: "/?action=cart.php",
+				url: "/?action=cart",
 				data : { 
 					action: 'addToCart',
 					product: product,
