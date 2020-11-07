@@ -1,4 +1,6 @@
 <?php
+echo 'Added';
+/*
 
 if(isset($_POST['action']) && !empty($_POST['action'])){
     echo 'toto'
@@ -23,7 +25,7 @@ function createCart(){
  }
  
  function addToCart($product,$qtyProduct){
-    /*
+    
     //Si le cart existe
     if (creationcart() /*&& !isVerrouille())
     {
@@ -44,11 +46,11 @@ function createCart(){
     }
     else
     echo "Un problème est survenu veuillez contacter l'administrateur du site.";
-    */
+    
     $smarty->assign('result','ok');
     echo $product
     echo $qtyProduct;
- }
+ }*/
 
 ?>
 

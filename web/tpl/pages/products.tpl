@@ -5,11 +5,11 @@
 			$.ajax({
 				type: 'POST',
 				url: "/cart.php",
-				data : { 
+				/*data : { 
 					action: 'addToCart',
 					product: product,
 					qty: 1
-				},
+				},*/
 				success: function(data) {
 					console.log(data);
 				}
