@@ -6,6 +6,7 @@
 				type: 'POST',
 				url: "/cart.php",
 				data : {
+					action : 'addToCart'
 					id: id,
 					price: price,
 					qty: 1
