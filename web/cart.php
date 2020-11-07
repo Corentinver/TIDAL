@@ -1,5 +1,5 @@
 <?php
  $_SESSION['cart'] = 'one product';
- echo $$_SESSION['cart'] ;
+ echo $_SESSION['cart'] ;
 ?>
 
