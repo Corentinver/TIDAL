@@ -1,5 +1,6 @@
 <?php
 echo 'Added';
+$smarty->assign('cart','ok');
 /*
 
 if(isset($_POST['action']) && !empty($_POST['action'])){

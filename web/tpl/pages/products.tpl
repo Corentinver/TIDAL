@@ -18,6 +18,7 @@
 	{/literal}
 </script>
 <div class="latest_product_inner">
+{$cart}
 	<div class="row">
 		{foreach from=$products item=product}
 		<div class="col-lg-4 col-md-6">
