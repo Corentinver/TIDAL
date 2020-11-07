@@ -1,6 +1,5 @@
 <?php
-
- echo "Added";
- $smarty->assign('cart','ok');
+    $_SESSION['cart'];
+ echo $_SESSION;
 ?>
 
