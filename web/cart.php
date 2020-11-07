@@ -1,5 +1,6 @@
 <?php
- echo $_POST['product'];
+ echo $_POST['id'];
+ echo $_POST['price'];
  echo $_POST['qty'];
 ?>
 

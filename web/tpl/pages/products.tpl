@@ -1,12 +1,13 @@
 <script type="text/javascript">
 	{literal}
-		function AddToCart(product) {
+		function AddToCart(id, price) {
 			var element = document.getElementById('addcart'); 
 			$.ajax({
 				type: 'POST',
 				url: "/cart.php",
 				data : {
-					product: product,
+					id: id,
+					price: price,
 					qty: 1
 				},
 				success: function(data) {
@@ -37,7 +38,7 @@
 					</div>
 				</div>
 				
-				<input type="button" id="addcart" onclick="AddToCart({$product})" value="Add">
+				<input type="button" id="addcart" onclick="AddToCart({$product['id']}, {$product['price']})" value="Add">
 			</div>
 		</div>				
     {/foreach}		
