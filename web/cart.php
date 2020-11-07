@@ -25,7 +25,7 @@ function createCart(){
  function addToCart($id,$price,$qty){
     
     //Si le cart existe
-    if (creationcart() /*&& !isVerrouille()*/)
+    if (createCart() /*&& !isVerrouille()*/)
     {
        //Si le produit existe déjà on ajoute seulement la quantité
        $positionProduit = array_search($id,  $_SESSION['cart']['id']);
