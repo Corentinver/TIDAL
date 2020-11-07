@@ -11,7 +11,7 @@
 					qty: 1
 				},
 				success: function(data) {
-					alert(data)
+					console.log(data);
 				}
 			});
 		}
